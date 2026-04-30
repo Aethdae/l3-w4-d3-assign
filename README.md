@@ -3,7 +3,7 @@
 ## Installation
 
 - `npm i` to get dependencies
-- add .env containing a supabase table with columns:
+- add .env containing a supabase table with schema:
   - id `int8 primary`
   - todo `text`
   - severity `text`
