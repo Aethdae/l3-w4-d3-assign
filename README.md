@@ -3,11 +3,21 @@
 ## Installation
 
 - `npm i` to get dependencies
-- add .env containing a supabase table with schema:
-  - id `int8 primary`
+
+- add .env containing a supabase table "todos" with schema:
+  - id `int8 primary key`
   - todo `text`
   - severity `text`
   - created_at `timestamptz`
+- Alternatively:
+  ```sql
+  CREATE TABLE todos(
+  id bigint PRIMARY KEY,
+  created_at timestamptz DEFAULT now(),
+  severity text NOT NULL,
+  todo text NOT NULL
+  )
+  ```
 
 ## Usage
 
